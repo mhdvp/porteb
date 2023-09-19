@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url("styles.css");
+      #dpi {
+        background-color: brown;
+        height: 1in;
+        /* left: -100%; */
+        position: absolute;
+        /* top: -100%; */
+        width: 1in;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- test -->
+    <p id="a">alert2</p>
+    <button id="btn" onclick="user.changeP(a);">Change</button>
+    <input id="inp" />
+
+    <div id="sym_panel">
+      <!-- پنل سمبل راست  -->
+      <svg
+        style="display: inline-block"
+        id="R_sym_panel"
+        tabindex="1"
+        viewBox="0 0 40 10"
+        xmlns="http://www.w3.org/2000/svg"
+      ></svg>
+      <!-- پنل سمبل چپ  -->
+      <svg
+        id="L_sym_panel"
+        tabindex="1"
+        viewBox="0 0 40 10"
+        xmlns="http://www.w3.org/2000/svg"
+      ></svg>
+    </div>
+
+    <div id="aud_table">
+      <!-- صفحه ادیوگرام راست -->
+      <svg
+        id="R_aud_table"
+        tabindex="1"
+        viewBox="-20 -20 180 180"
+        xmlns="http://www.w3.org/2000/svg"
+      ></svg>
+      <!-- صفحه ادیوگرام چپ -->
+      <svg
+        id="L_aud_table"
+        tabindex="1"
+        viewBox="-20 -20 180 180"
+        xmlns="http://www.w3.org/2000/svg"
+      ></svg>
+    </div>
+    <script type="module" src="main.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/serviceworker.js");
+      }
+    </script>
+  </body>
+</html>
